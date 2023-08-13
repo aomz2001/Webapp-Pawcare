@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Noto+Sans+Thai:wght@100&family=Noto+Serif:wght@200&family=REM&display=swap');
+
+
+
+  /* font-family: 'Noto Sans Thai', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'REM', sans-serif; 
+  font-family: 'Arsenal', sans-serif;*/
+
+.info-title{
+    font-family: 'Noto Sans Thai', sans-serif;
+    background-color: #FFF8EA;
+    display: flex;
+    align-items: center;
+    height: 30vh;
+    background-image: url("../img/bg-aboutus2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(95%);
+}
+.text-title{
+    text-shadow: -1px 0px 1px rgba(113, 117, 122, 0.8);
+    font-size: 64px;
+    color: #fff;
+    font-weight: 900;
+    margin-left: 15%;
+    letter-spacing: 5px
+}
+
+.bg-content{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFF8EA;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.content-aboutus h1{
+    text-shadow: -1px 0px 1px rgba(113, 117, 122, 0.8);
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+.content-aboutus p{
+    text-shadow: -1px 0px 1px rgba(113, 117, 122, 0.8);
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-left: 7%;
+}

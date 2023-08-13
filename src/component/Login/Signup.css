@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Noto+Sans+Thai:wght@100&family=Noto+Serif:wght@200&family=REM&display=swap');
+
+
+
+  /* font-family: 'Noto Sans Thai', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'REM', sans-serif; 
+  font-family: 'Arsenal', sans-serif;*/
+
+.bg-signup{
+    width: 100%;
+    height: 80vh;
+    background-color: #FFF8EA;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.frame-signup{
+  height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+.signup{
+  justify-content: center;
+}
+.text-title-signup h1{
+  font-family: 'Noto Sans Thai', sans-serif;
+  color: #815B5B;
+  font-size: 40px;
+  font-weight: 900;
+  padding-left: 15px;
+}
+
+.text-title-signup p{
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  padding-left: 85px;
+}
+/*--------------------------------------------------------------*/
+.signup-user {
+  border-radius: 100px;
+  background-color: #815B5B;
+  color: #ffffff;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  cursor:pointer;
+  margin-left: 80px;
+  text-decoration: none;
+}
+.signup-user:hover {
+  background-color: #815B5B;
+  box-shadow: 0 0 20px #815B5B;
+  transform: scale(1.1);
+}
+
+.signup-user:active {
+  background-color: #815B5B;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+.signup-button{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Noto Serif', serif;
+}
+/*--------------------------------------------------------------*/
+.signin{
+  text-decoration: none;
+  color: #815B5B;
+  font-size: 21px;
+  font-family: 'Arsenal', sans-serif;
+  border-radius: 10px;
+  width: 400px;
+  padding: 10px;
+}
+
+.inputname{
+  width: 100%;
+  margin: 15px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.inputpwd{
+  width: 100%;
+  margin: 15px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+/*--------------------------------------------------------------*/
+.signin-user{
+  border-radius: 100px;
+  margin-left: 120px;
+}
+.signin-submit {
+  background-color: #815B5B;
+  color: #ffffff;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  cursor:pointer;
+  text-decoration: none;
+  border: none;
+}
+.signin-submit:hover {
+  background-color: #815B5B;
+  box-shadow: 0 0 20px #815B5B;
+  transform: scale(1.1);
+}
+
+.signin-submit:active {
+  background-color: #815B5B;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+.signin-submit{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Noto Serif', serif;
+}

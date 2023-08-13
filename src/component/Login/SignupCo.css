@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Noto+Sans+Thai:wght@100&family=Noto+Serif:wght@200&family=REM&display=swap');
+
+.frame-bgup{
+    width: 100%;
+    height: 70vh;
+    background-color: #FFF8EA;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* สไตล์หลักสำหรับฟอร์ม */
+.bg-signupCo {
+  background-color: #FFF8EA;
+  padding: 40px;
+  max-width: 600px; /* กำหนดความกว้างสูงสุดของฟอร์ม */
+  margin: 0 auto; /* จัดฟอร์มให้อยู่กลางหน้า */
+  
+}
+
+/* สไตล์ตารางของฟอร์ม */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 20px; /* ปรับระยะห่างในคอลัมน์ */
+}
+
+/* สไตล์ฟิลด์นำเข้าข้อมูล */
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* สไตล์ปุ่มสมัครสมาชิก */
+.signup-submit {
+  background-color: #815B5B;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* กำหนดความกว้างของปุ่มให้เท่ากับฟิลด์ */
+  display: block;
+}
+
+.signup-submit:hover {
+  background-color: #4d3f31;
+}
+
+/* สไตล์ป้ายชื่อฟิลด์ */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ปรับขนาดฟิลด์ชื่อ-นามสกุล */
+input[name="firstname"],
+input[name="lastname"],
+input[name="nickname"],
+input[name="phonenum"],
+input[type="password"],
+textarea[name="suggest"] {
+  width: 100%; /* ลดความกว้างของฟิลด์ให้สั้นลง */
+  padding: 10px; /* ลดความสูงของฟิลด์ให้ไม่สูงมาก */
+}
+
+/* สไตล์สำหรับคอลัมน์เดียว */
+.single-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* สไตล์ปุ่มสมัครสมาชิก */
+.signup-submit {
+  width: auto; /* ปรับเป็นความกว้างที่เหมาะสม */
+  display: block;
+  margin: 20px auto; /* จัดปุ่มให้อยู่กลาง */
+}

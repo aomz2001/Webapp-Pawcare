@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100&family=Noto+Serif:wght@200&display=swap');
+
+/* ----------------------------------------------------- */
+.contect-pawcare{
+    width: 100%;
+    height: 18vh;
+    background-color: #2D2D2D;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.frame-contect-pawcare{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pic-contect{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.gmail{
+    width: 55px;
+    height: 55px;
+    margin-left: 30px;
+    margin-top: 25px;
+    background-image: url("../img/gmail.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fb{
+    width: 55px;
+    height: 55px;
+    margin-left: 30px;
+    margin-top: 25px;
+    background-image: url("../img/fb.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ig{
+    width: 55px;
+    height: 55px;
+    margin-left: 30px;
+    margin-top: 25px;
+    background-image: url("../img/ig.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.line{
+    width: 55px;
+    height: 55px;
+    margin-left: 30px;
+    margin-top: 25px;
+    background-image: url("../img/line.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.name-contect{
+    color: #ffffff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 35px;
+    margin-right: 50px;
+    font-size: 26px;
+    font-weight: 900;
+}

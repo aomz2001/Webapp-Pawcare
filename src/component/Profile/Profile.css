@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Noto+Sans+Thai:wght@100&family=Noto+Serif:wght@200&family=REM&display=swap');
+
+
+
+  /* font-family: 'Noto Sans Thai', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'REM', sans-serif; 
+  font-family: 'Arsenal', sans-serif;*/
+
+
+.bg-profile{
+    font-family: 'Noto Sans Thai', sans-serif;
+    background-color: #FFF8EA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    margin: 0;
+}
+.profile-form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+/*========================อัพโหลดรูป========================*/
+.profile-upload {
+  text-align: center;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  background-color: #ddd;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.ch-profile {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 2px solid #815B5B;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #815B5B;
+  color: white;
+  transition: background-color 0.3s;
+  margin-bottom: 30px;
+}
+
+.ch-profile:hover {
+  background-color: #6d5656;
+}
+
+/*=========================================================*/
+
+.p-user, .p-funame, .p-email, .p-phone, .p-bd, .p-provider {
+  width: 290px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  margin-bottom: 8px;
+  
+}
+/*===================================================*/
+.p-chpwd ,.p-chemail{
+  background-color: #D9D9D9;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+}
+.p-chpwd:hover , .p-chemail:hover {
+  background-color: #bababa;
+}
+
+.p-chpwd {
+  background-color: #D9D9D9;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  
+}
+.p-chpwd:hover {
+  background-color: #bababa;
+}
+/*===================================================*/
+.con-save{
+  text-align: center;
+  margin-top: 30px;
+}
+.p-save{
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-weight: bolder;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #07bd74;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.p-save:hover{
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.p-save:active {
+  transform: translateY(-1px);
+}
+
+.frame-info{
+  margin-left: 20px;
+}
+.title-pf{
+  font-weight: 900;
+}

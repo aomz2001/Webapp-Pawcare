@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100&family=Noto+Serif:wght@200&display=swap');
+
+  /* font-family: 'Noto Sans Thai', sans-serif;
+  font-family: 'Noto Serif', serif; */
+
+.bg-hero {
+    width: 100%;
+    height: 90vh;
+    background-image: url("../img/Wallpaper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-hero p {
+    position: relative;
+    font-family: 'Noto Serif', serif;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text-hero h1 {
+    font-family: 'Noto Serif', serif;
+    color: #fff;
+    font-size: 96px;
+    letter-spacing: 5px
+    
+}
+
+.text-hero {
+    font-family: 'Noto Serif', serif;
+    padding-top: 90px;
+    
+    width: 800px;
+    text-align: center;
+}
+/*------------------------------------------------------------*/
+.bg-subhero{
+    width: 100%;
+    height: 12vh;
+    background-color: #8A8178;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-service{
+    width: 100%;
+    height: 100%;
+    background-color: #FFF8EA;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.home-bg-title{
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 0px 0px;
+}
+.home-title{
+    display: block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    padding: 0px 0px;
+    
+}
+.home-title-1{
+    display: block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    padding: 0px 0px;
+}
+.frame-home-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 135px;
+}
+.frame-home-title-1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 135px;
+}
+.title-t1{
+    color: #ffffff;
+    background-color: #272222;
+    font-weight: 600;
+    
+    height: 100%;
+    padding: 10px;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+.title-t1 h1 {
+    margin-top: 5%;
+    text-align: left;
+}
+
+.title-t2{
+    color: #ffffff;
+    background-color: #584E4E;
+    font-weight: 600;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+    font-family: 'Noto Sans Thai', sans-serif;    
+}
+.title-t2 h1 {
+    margin-top: 8%;
+    text-align: left;
+}
+.title-t2 p {
+    text-align: left;
+}
+
+.title-t3{
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/bg-ser.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(75%);
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.title-t4{
+    color: #ffffff;
+    background-color: #584E4E;
+    font-weight: 600;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+.title-t4 h1 {
+    margin-top: 8%;
+    text-align: left;
+}
+.title-t4 p {
+    text-align: left;
+}
+
+.title-t5{
+    color: #ffffff;
+    background-color: #272222;
+    font-weight: 600;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    background-image: url("../img/petincar.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(85%);
+}
+.title-t5 h1 {
+    margin-top: 5%;
+    text-align: left;
+    filter: brightness(100%);
+}
+.title-t5 p {
+    text-align: left;
+    filter: brightness(100%);
+}
+
+.title-t6{
+    color: #ffffff;
+    background-color: #584E4E;
+    font-weight: 600;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+.title-t6 h1 {
+    margin-top: 5%;
+    text-align: left;
+}
+.title-t6 p {
+    text-align: left;
+}   
+
+/* ------------------------------------------------------- */
+.find-pet{
+    width: 100%;
+    height: 9%;
+    background-color: #2D2D2D;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: inline-flex;
+}
+
+.find-title {
+    
+    height: 70vh;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 100px;
+   
+}
+
+.find-title select {
+    width: 400px;
+    padding-left: 50px;
+   
+}
+
+.find-title-1 h1{
+    color: #fff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+.find-title-1 p{
+    color: #fff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 24px;
+    margin-left: 60px;
+}
+
+.select-box-pet{
+    font-size: 1.2rem;
+    padding: 0.25em 6em;
+    background: #fff;
+    color: #2D2D2D;
+    border-radius: 20px;
+    border: 0;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-bottom: 10px;
+    font-weight: 900;
+    margin-left: 60px;
+}
+.select-box-district{
+    font-size: 1.2rem;
+    padding: 0.25em 6em;
+    background: #fff;
+    color: #2D2D2D;
+    border-radius: 20px;
+    border: 0;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-bottom: 10px;
+    font-weight: 900;
+    margin-left: 60px;
+}
+.select-box-serve{
+    font-size: 1.2rem;
+    padding: 0.25em 6em;
+    background: #fff;
+    color: #2D2D2D;
+    border-radius: 20px;
+    border: 0;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-bottom: 10px;
+    font-weight: 900;
+    margin-left: 60px;
+}
+.select-box-price{
+    font-size: 1.2rem;
+    padding: 0.25em 6em;
+    background: #fff;
+    color: #2D2D2D;
+    border-radius: 20px;
+    border: 0;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-bottom: 50px;
+    font-weight: 900;
+    margin-left: 60px;
+}
+.text-select{
+    font-weight: 900;
+}
+.serach-button {
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #815B5B;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    cursor:pointer;
+    margin-left: 60px;
+  }
+  
+  .serach-button:hover {
+    background-color: #815B5B;
+    box-shadow: 0 0 20px #815B5B;
+    transform: scale(1.1);
+  }
+  
+  .serach-button:active {
+    background-color: #815B5B;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+  }
+
+.find-pet-pic{
+
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/dog1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(75%);
+
+}
+
+/*---------------------------------------------------------*/
+.step-serve{
+    width: 100%;
+    height: 50vh;
+    background-color: #8A8178;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+/* .bg-frame{
+    background-color: #8d4242;
+} */
+.frame-step{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    height: 300px;
+    
+}
+.step-1{
+    background-color: #fff;
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    
+}
+.pic-step1{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 25px;
+    background-image: url("../img/search.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-step1 h1{
+    color: #fff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 40px;
+    font-size: 22px;
+}
+.text-step1 p{
+    color: #000000;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+.step-2{
+    background-color: #fff;
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+}
+.pic-step2{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 30px;
+    background-image: url("../img/user.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-step2 h1{
+    color: #fff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 40px;
+    font-size: 22px;
+}
+.text-step2 p{
+    color: #000000;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+.step-3{
+    background-color: #fff;
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+}
+.pic-step3{
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 30px;
+    background-image: url("../img/calenda.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-step3 h1{
+    color: #fff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 40px;
+    font-size: 22px;
+}
+.text-step3 p{
+    color: #000000;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+.step-4{
+    background-color: #fff;
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+}
+.pic-step4{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 25px;
+    background-image: url("../img/check-mark.png"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-step4 h1{
+    color: #fff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 40px;
+    font-size: 20px;
+}
+.text-step4 p{
+    color: #000000;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* ------------------------------------------------------------- */
+.bg-substep{
+    width: 100%;
+    height: 12vh;
+    background-color: #D9D9D9;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.u-provider{
+    width: 100%;
+    height: 65vh;
+    background-color: #FFF8EA;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/* .f-u-provider{
+    background-color: #8d4242;
+} */
+.su-provider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    height: 65vh;
+    margin-left: 310px;
+}
+
+.text-provider h1{
+    color: #000000;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 48px;
+    margin-left: 90px;
+}
+.text-provider p{
+    color: #000000;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 24px;
+    margin-left: 90px;
+    font-weight: 800;
+}
+
+.su-mentor-button {
+    border-radius: 100px;
+    background-color: #815B5B;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    cursor:pointer;
+    margin-left: 80px;
+    text-decoration: none;
+  }
+  
+  
+  .su-mentor-button:hover {
+    background-color: #815B5B;
+    box-shadow: 0 0 20px #815B5B;
+    transform: scale(1.1);
+  }
+  
+  .su-mentor-button:active {
+    background-color: #815B5B;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+  }
+  .su-mentor-button1{
+    list-style: none;
+    font-family: 'Noto Sans Thai', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .pic-provider{
+    width: 350px;
+    height: 350px;
+    border-radius: 200px;
+    margin-left: 30px;
+    margin-top: 25px;
+    background-image: url("../img/picprovider.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.frame-aboutus{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.about-us{
+    width: 100%;
+    height: 40vh;
+    background-color: #8A8178;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.text-aboutus h1{
+    color: #000000;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 40px;
+    font-size: 48px;
+}
+.text-aboutus p{
+    color: #000000;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+/* ---------------------------------------------------- */
+.about-pawcare{
+    width: 100%;
+    height: 45vh;
+    background-color: #584E4E;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.frame-about-pawcare{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pawcare h1{
+    color: #FCB245;
+    font-family: 'Noto Serif', serif;
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 900;
+}
+.pawcare p{
+    color: #ffffff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: 900;
+    
+}
+.serve-pawcare h1{
+    color: #FCB245;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 900;
+}
+.serve-pawcare p{
+    color: #ffffff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: 900;
+}
+
