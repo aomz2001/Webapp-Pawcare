@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:wght@700&family=Noto+Sans+Thai:wght@100&family=Noto+Serif:wght@200&family=REM&display=swap');
+
+/* font-family: 'Noto Sans Thai', sans-serif;
+  font-family: 'Noto Serif', serif;
+  font-family: 'REM', sans-serif; 
+  font-family: 'Arsenal', sans-serif;*/
+
+.container-admin {
+    font-family: 'Noto Serif', serif;
+    background-color: #FFF8EA;
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 200px;
+}
+
+.serv-admin {
+    padding-left: 100px;
+}
+
+.serv-admin h1 {
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+.serv-admin hr {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.admin-title {
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.admin-input {
+    width: 290px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.ok-list {
+    background-color: #4CAF50;
+    border-radius: 10px;
+    margin-left: 20px;
+    color: white;
+}
+
+.ok-list:hover {
+    color: rgb(0, 0, 0);
+}
+
+.show-list {
+    color: white;
+    background-color: #008CBA;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.show-list:hover {
+    
+    color: rgb(0, 0, 0);
+}
+
+.update-list {
+    background-color: #f9b420;
+    margin-left: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.update-list:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+.card-text{
+    font-weight: 900;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 19px;
+}
+
+.delete-list {
+    background-color: #b43e27;
+    margin-left: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.delete-list:hover {
+    color: #f9b420;
+}

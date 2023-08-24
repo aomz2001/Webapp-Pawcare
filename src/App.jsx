@@ -10,6 +10,7 @@ import Profile from './component/Profile/Profile'
 import Footer from './component/footer/footer'
 import SignupComponent from './component/Login/SignupComponent'
 import Conprivacy from './component/condition/conprivacy'
+import AdminEditServ from './component/adminEdit/AdminEditServ'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/profile" element={<Profile/>} />
           <Route path="/signupcomponent" element={<SignupComponent/>} />
           <Route path="/conprivacy" element={<Conprivacy/>} />
+          <Route path="/admineditserv" element={<AdminEditServ/>} />
         </Route>
       </Routes>
       <Footer/>
