@@ -14,8 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
-    margin: 0;
+    padding: 70px 0 70px 0;
+    
 }
 .profile-form {
   background-color: white;
@@ -85,6 +85,7 @@ input[type="file"] {
   border-radius: 4px;
   transition: background-color 0.3s ease;
   margin-left: 15px;
+  width: 250px;
 }
 .p-chpwd:hover , .p-chemail:hover {
   background-color: #bababa;
@@ -121,6 +122,7 @@ input[type="file"] {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  margin-bottom: 30px;
 }
 .p-save:hover{
   background-color: #23c483;
@@ -137,4 +139,10 @@ input[type="file"] {
 }
 .title-pf{
   font-weight: 900;
+}
+.delete-profile {
+  background-color: #b43e27;
+  margin-left: 20px;
+  border-radius: 10px;
+  color: white;
 }

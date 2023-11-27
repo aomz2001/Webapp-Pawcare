@@ -36,6 +36,40 @@ function Home() {
   }, []);
   console.log(ServPriceList, "ServPriceList")
 
+  //==========================================เอาไว้กรอกไม่ให้เข้าหน้านั้นๆเมื่อยังไม่ได้ Sign in===================================================
+  // useEffect(() => {
+  //   const token = localStorage.getItem('token');
+    
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:5050/authen", {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //           Authorization: `Bearer ${token}` // Set Authorization header correctly
+  //         },
+  //       });
+  
+  //       const result = await response.json();
+  //       console.log(result); // Handle the response from the server
+  
+  //       if (result.status === "ok") {
+  //         // alert("Authen Success");
+  //       } else {
+  //         alert("Authen Failed");
+  //         localStorage.removeItem('token')
+  //         window.location = '/signup'; // Redirect on authentication failure
+  //       }
+  
+  //     } catch (error) {
+  //       console.error("Error:", error);
+  //     }
+  //   };
+  
+  //   fetchData();
+  // }, []);
+   //==============================================เอาไว้กรอกไม่ให้เข้าหน้านั้นๆเมื่อยังไม่ได้ Sign in=============================================
+
 
   return (
     <>

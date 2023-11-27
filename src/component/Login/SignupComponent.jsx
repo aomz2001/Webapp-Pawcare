@@ -8,33 +8,33 @@ function SignupComponent() {
   const [username, setUsername] = useState("");
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState(0);
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [address, setAddress] = useState("");
 
-  const [signupList, setSignupList] = useState([]);
+  const addSignup = async (e) => {
+    e.preventDefault();
 
-  const addSignup = () => {
-    axios.post('http://localhost:5050/create', {
-      signup_uname: username,
-      signup_fullname: fullname,
-      signup_email: email,
-      signup_phone: phone,
-      signup_password: password,
-      signup_address: address
-    }).then(() => {
-      setSignupList([
-        ...signupList,
-        {
-          signup_uname: username,
-          signup_fullname: fullname,
-          signup_email: email,
-          signup_phone: phone,
-          signup_password: password,
-          signup_address: address
-        }
-      ])
-    })
+    try {
+      const response = await axios.post('http://localhost:5050/signup', {
+        signup_uname: username,
+        signup_fullname: fullname,
+        signup_email: email,
+        signup_phone: phone,
+        signup_pwd: password,
+        signup_address: address
+      });
+
+      const result = response.data;
+      if (result.status === "ok") {
+        alert("Sign up Success");
+        window.location = '/signup'
+      } else {
+        alert("Sign up Failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
 
   return (
@@ -42,7 +42,7 @@ function SignupComponent() {
       <div className="frame-bgup">
         <div className="bg-signupCo">
           <div className="frame-sup">
-            <form action="">
+            <form onSubmit={addSignup}>
               <table>
                 <tr>
                   <td>
@@ -104,7 +104,7 @@ function SignupComponent() {
               </table>
               <input type="checkbox" value="agree" required />ฉันได้อ่านและยอมรับ
               <Link to="/conprivacy" >ข้อตกลงและเงื่อนไขการใช้งานของ PAWCARE</Link>
-              <input type="submit" value="SIGN UP" className='signup-submit' onClick={addSignup} />
+              <input type="submit" value="SIGN UP" className='signup-submit' />
             </form>
           </div>
         </div>

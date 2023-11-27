@@ -2,9 +2,18 @@ const express = require("express");
 const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
+var bodyParser = require("body-parser");
+var jsonParser = bodyParser.json();
+var jwt = require("jsonwebtoken");
+const secret = "pawcare-Login-2023";
+var cookieParser = require('cookie-parser')
+
 
 app.use(cors());
 app.use(express.json());
+ 
 
 const db = mysql.createConnection({
   user: "root",
@@ -12,8 +21,74 @@ const db = mysql.createConnection({
   password: "",
   database: "pawcare",
 });
-/*================================================================================ Signup Page*/
-app.get("/signup", (req, res) => {
+/*================================================================================ Register Page*/
+  
+
+app.post("/signup", function (req, res, next) {
+  bcrypt.hash(req.body.signup_pwd, saltRounds, function (err, hash) {
+    db.query(
+      "INSERT INTO signup (signup_uname, signup_fullname, signup_email, signup_phone, signup_pwd, signup_address) VALUES(?,?,?,?,?,?)",
+      [req.body.signup_uname, req.body.signup_fullname, req.body.signup_email, req.body.signup_phone, hash, req.body.signup_address],
+      function (err, results, fields) {
+        if (err) {
+          res.json({ status: "error", message: err });
+          return;
+        }
+        res.json({ status: "ok" });
+        
+      }
+    );
+  });
+});
+
+
+app.post("/signin", jsonParser, function (req, res, next) {
+  db.query(
+    "SELECT * FROM signup WHERE signup_uname=?",
+    [req.body.signup_uname],
+    function (err, signup, fields) {
+      if (err) {
+        res.json({ status: "error", message: err });
+        return;
+      }
+      if (signup.length == 0) {
+        res.json({ status: "error", message: "no users found" });
+        return;
+      }
+      bcrypt.compare(
+        req.body.signup_pwd,
+        signup[0].signup_pwd,
+        function (err, isLogin) {
+          if (isLogin) {
+            var token = jwt.sign({ signup_uname: signup[0].signup_uname }, secret, {
+              expiresIn: '1h',
+            });
+            res.json({ status: "ok", message: "login success" , token});
+          } else {
+            res.json({ status: "err", message: "login failed" });
+          }
+        }
+      );
+    }
+  );
+});
+
+
+app.post("/authen", jsonParser, function (req, res, next) {
+  try {
+    const token = req.headers.authorization.split(" ")[1];
+    var decoded = jwt.verify(token, secret);
+    res.json({ status: "ok", decoded });
+  } catch (err) {  
+    res.json({ status: "error", message: err.message });
+  }
+});
+
+
+/*================================================================================ Register Page*/
+/*================================================================================ ProfileUser Page*/
+
+app.get("/profile", (req, res) => {
   db.query("SELECT * FROM signup", (err, result) => {
     if (err) {
       console.log(err);
@@ -22,32 +97,36 @@ app.get("/signup", (req, res) => {
     }
   });
 });
+app.put('/update-username', jsonParser, (req, res) => {
+  const { newUsername } = req.body;
+  const token = req.headers.authorization.split(" ")[1]; // ดึง Token จาก Header
 
-app.post("/create", (req, res) => {
-  const username = req.body.signup_uname;
-  const fullname = req.body.signup_fullname;
-  const email = req.body.signup_email;
-  const phone = req.body.signup_phone;
-  const password = req.body.signup_password;
-  const address = req.body.signup_address;
+  try {
+    const decoded = jwt.verify(token, secret);
+    const currentUsername = decoded.signup_uname;
 
-  db.query(
-    "INSERT INTO signup (signup_uname, signup_fullname, signup_email, signup_phone, signup_pwd, signup_address) VALUES(?,?,?,?,?,?)",
-    [username, fullname, email, phone, password, address],
-    (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.send("Values Insert");
+    // เรียกใช้งานคำสั่ง SQL หรือ ORM ของคุณเพื่ออัปเดต Username
+    db.query(
+      "UPDATE signup SET signup_uname = ? WHERE signup_uname = ?",
+      [newUsername, currentUsername],
+      (err, result) => {
+        if (err) {
+          console.error(err);
+          res.status(500).json({ status: 'error', message: 'เกิดข้อผิดพลาดในการอัปเดต Username' });
+        } else {
+          // สำเร็จ
+          res.json({ status: 'ok', message: 'อัปเดต Username สำเร็จ' });
+        }
       }
-    }
-  );
+    );
+  } catch (error) {
+    console.error(error);
+    res.status(401).json({ status: 'error', message: 'ไม่สามารถตรวจสอบ Token หรืออัปเดต Username ได้' });
+  }
 });
-/*================================================================================ Signup Page*/
 
-/*================================================================================ AdminServ Page*/
 
-/*================================================================================ AdminServ Page*/
+/*================================================================================ ProfileUser Page*/
 /*================================================================================ AdminServPet Page*/
 app.get("/showservpet", (req, res) => {
   db.query("SELECT * FROM servpet", (err, result) => {

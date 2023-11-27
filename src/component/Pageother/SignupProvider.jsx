@@ -1,7 +1,42 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './SignupProvider.css'
 
 function SignupProvider() {
+  
+//==========================================เอาไว้กรอกไม่ให้เข้าหน้านั้นๆเมื่อยังไม่ได้ Sign in===================================================
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:5050/authen", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}` // Set Authorization header correctly
+          },
+        });
+  
+        const result = await response.json();
+        console.log(result); // Handle the response from the server
+  
+        if (result.status === "ok") {
+          // alert("Authen Success");
+        } else {
+          alert("โปรด Sign In ก่อนใช้งาน");
+          localStorage.removeItem('token')
+          window.location = '/signup'; // Redirect on authentication failure
+        }
+  
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+//==========================================เอาไว้กรอกไม่ให้เข้าหน้านั้นๆเมื่อยังไม่ได้ Sign in===================================================
+
   return (
     <>
     <div className="bg-signupprovider">
@@ -15,37 +50,37 @@ function SignupProvider() {
           <div className="frame-infoprovider-form">
             <tr>
               <td>
-                <label for="username">ชื่อผู้ใช้งาน</label>
+                <label htmlFor="username">ชื่อผู้ใช้งาน</label>
                 <input className='signup-provider-user' name="username" required/>
               </td>
               <td>
-                <label for="fullname">ชื่อ-นามสกุล</label>
+                <label htmlFor="fullname">ชื่อ-นามสกุล</label>
                 <input className='signup-provider-fullname' name="fullname" required/>
               </td>
               <td>
-                <label for="phone">เบอร์โทรศัพท์</label>
+                <label htmlFor="phone">เบอร์โทรศัพท์</label>
                 <input className='signup-provider-phone' name="phone" required/>
               </td>
             </tr>
 
             <tr>
               <td>
-                <label for="password">รหัสผ่าน</label>
+                <label htmlFor="password">รหัสผ่าน</label>
                 <input className='signup-provider-pwd' name="pwd" required/>
               </td>
               <td>
-                <label for="email">อีเมล</label>
+                <label htmlFor="email">อีเมล</label>
                 <input className='signup-provider-email' name="email" required/>
               </td>
               <td>
-                <label for="address">ที่อยู่</label>
+                <label htmlFor="address">ที่อยู่</label>
                 <textarea className='signup-provider-address' required/>
               </td>
             </tr>
 
             <tr>
               <td>
-                <label for="serv">บริการ (เลือกได้มากกว่า 1 อย่าง)</label><br/>
+                <label htmlFor="serv">บริการ (เลือกได้มากกว่า 1 อย่าง)</label><br/>
                 <input className='signup-provider-serv' type="checkbox" name="phone" />บริการฝากเลี้ยงค้างคืน<br/>
                 <input className='signup-provider-serv' type="checkbox" name="phone" />บริการเล่นเดิน<br/>
                 <input className='signup-provider-serv' type="checkbox" name="phone" />บริการซื้อ-ขาย<br/>
@@ -53,11 +88,11 @@ function SignupProvider() {
                 <input className='signup-provider-serv' type="checkbox" name="phone" />บริการอาบน้ำทำความสะอาด
               </td>
               <td>
-                <label for="price">ราคาที่ให้บริการ</label>
+                <label htmlFor="price">ราคาที่ให้บริการ</label>
                 <input className='signup-provider-price' required/>
               </td>
               <td>
-                <label for="info-serv">บอกอะไรเกี่ยวกับบริการของคุณ</label>
+                <label htmlFor="info-serv">บอกอะไรเกี่ยวกับบริการของคุณ</label>
                 <textarea className='signup-provider-info'/>
               </td>
             </tr>
